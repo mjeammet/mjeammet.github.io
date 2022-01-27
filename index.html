@@ -1,1 +1,52 @@
-Hola todxs
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="{% static 'resume/css/styles.css' %}">
+    </head>
+    <body style="margin: auto; text-align: center;">
+        <div style="width:60%; margin: auto; text-align: center;">
+
+            <img style="width: 40%; margin-top: 20%; border: black 5px ridge;" src="/assets/images/avatar_garnet.png" alt="garnet_avatar" width="300px"/>
+
+            <h1>Marie Pupo-Jeammet</h1>
+            <p>
+                <ul style="display: inline-flex;">
+                    <li style="margin-right:30px;">Back-end developer python/Django</li>
+                    <li>TTRPG enthusiast</li>
+                </ul>
+            </p>
+
+            <!-- <div>
+                <div>
+                    <h3>Currently reading</h3>
+                    <img style="border: black 2px solid;" src="{{ book_data.cover.medium }}" alt="">
+                    <table style="margin: auto;">
+                        <thead>
+                            <tr>
+                                <th colspan="2">{{ book_data.title }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>by</td>
+                                {% for author in book_data.authors %}
+                                    <td>{{ author.name }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                <td colspan="2"><a href="{{ book_data.url }}">see on openlibrary.org</a></td>
+                            </tr>
+                        </tbody>          
+                    </table>
+                </div>
+            </div> -->
+        </div>
+        
+        <!-- <footer>
+            <hr style="width: 80%;">
+            <p>Made by Marie, 2021</p>
+        </footer> -->
+    </body>
+</html>
