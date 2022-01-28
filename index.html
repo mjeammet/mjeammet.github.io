@@ -17,33 +17,17 @@
                     <li>TTRPG enthusiast</li>
                 </ul>
             </p>
+            
+            <a href="https://github.com/mjeammet"><img src="https://github.com/fluidicon.png" alt="Github" width="50px"></a>
 
-            <p>(Website under construction)</p>
-
-            <!-- <div>
-                <div>
+            <hr style="width: 80%;">
+            <div>
+                <div style="margin: auto;">
                     <h3>Currently reading</h3>
-                    <img style="border: black 2px solid;" src="{{ book_data.cover.medium }}" alt="">
-                    <table style="margin: auto;">
-                        <thead>
-                            <tr>
-                                <th colspan="2">{{ book_data.title }}</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>by</td>
-                                {% for author in book_data.authors %}
-                                    <td>{{ author.name }}</td>
-                                {% endfor %}
-                            </tr>
-                            <tr>
-                                <td colspan="2"><a href="{{ book_data.url }}">see on openlibrary.org</a></td>
-                            </tr>
-                        </tbody>          
-                    </table>
+                    <a id="currentbook_cover" href=""><img style="border: black 2px solid;" src="" alt=""></a>
+                    <p id='currentbook_basicinfo'></p>
                 </div>
-            </div> -->
+            </div>
         </div>
         
         <script src="/assets/js/script.js" type="text/javascript"></script>
