@@ -4,3 +4,8 @@ body{
     color:rgb(1, 12, 63);
     font-size: larger;
 }
+
+.project_box{
+    width: 47%;
+    margin: 1vw;
+}
