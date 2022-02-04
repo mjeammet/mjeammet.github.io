@@ -1,7 +1,5 @@
 {"projects":[
-    {"firstName":"John", "lastName":"Doe"},
-    {"firstName":"Anna", "lastName":"Smith"},
-    {"firstName":"Peter", "lastName":"Jones"}
+    {"title":"DAPY P6: Just Stream it", "text":"Yes but really, chill out, it's just a test"}
   ],
   "current_book":
   {"isbn": 9782070336197}

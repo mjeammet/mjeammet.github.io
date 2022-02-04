@@ -43,6 +43,6 @@ async function load_currentbook(isbn){
 function load_projects(projects_list){
 
     for (project of projects_list){
-        alert(project);
+        console.log(project);
     } 
 } 
