@@ -1,4 +1,4 @@
-const currentbook_ISBN = "9780099582151";
+const currentbook_ISBN = "9782070336197";
 // Pardonnez cette infamie mais pas sans db, voilà commment ça se finit. json incoming ?
 const bookapi_url = `https://openlibrary.org/api/books?bibkeys=ISBN:${currentbook_ISBN}&jscmd=data&format=json`;
 

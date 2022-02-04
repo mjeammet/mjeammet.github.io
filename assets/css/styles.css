@@ -1,5 +1,9 @@
 body{
-    background-image: url('/assets/images/background_sugarhighkid1.png');
+    background-image: url('/assets/images/background_sugarhighkid.png');
+    /* https://brandfolder.com/workbench/color-palette: lots of #feaf4e */
+    background-repeat: repeat;
+    background-position: right top;
+    background-size: contain;
     font-weight: bolder;
     color:rgb(1, 12, 63);
     font-size: larger;
@@ -8,4 +12,23 @@ body{
 .project_box{
     width: 47%;
     margin: 1vw;
+}
+
+.text_box{
+    background-color: #feaf4e; 
+    opacity: 0.7;
+}
+
+.project_img{
+    margin-top: 15px;
+    width: 95%;
+    border: black 2px solid;
+}
+.project_img:hover{
+    margin-top: 0px;
+    width: 100%;
+}
+
+a{
+    color: rgb(48, 43, 87);
 }
