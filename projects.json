@@ -1,0 +1,8 @@
+{"projects":[
+    {"firstName":"John", "lastName":"Doe"},
+    {"firstName":"Anna", "lastName":"Smith"},
+    {"firstName":"Peter", "lastName":"Jones"}
+  ],
+  "current_book":
+  {"isbn": 9782070336197}
+}
