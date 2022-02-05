@@ -1,0 +1,13 @@
+{"projects":[
+    {"id":"DAPYP6", "title":"DAPY P6: Just Stream it",
+      "link":"https://github.com/mjeammet/DAPY-P6_juststreamit",
+      "description":"Front-end / Javascript project. \"Consume\" a public API listing movies and display its content in an interactive \"Netflix-like\" fashion with carousels.",
+      "tags": ["front-end", "javascript", "api"]},
+    {"id":"DAPYP4", "title":"DAPY P4: Chess tournament manager",
+      "link":"https://github.com/mjeammet/DAPY-P4_chess_tournament_manager",
+      "description": "Console app. Allows to add, display and modify players in database, and assist user in matching players and keeping track of results.",
+      "tags": ["python", "mvc-architecture", "json"]}
+  ],
+  "current_book":
+  {"isbn": 9782070336197}
+}
