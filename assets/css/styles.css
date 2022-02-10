@@ -9,10 +9,10 @@ body{
     font-size: larger;
 }
 
-.project_box{
+/* .project_box{
     width: 47%;
     margin: 1vw;
-}
+} */
 
 .text_box{
     background-color: #feaf4e; 
@@ -32,3 +32,28 @@ body{
 a{
     color: rgb(48, 43, 87);
 }
+
+/* .row {
+    display: flex;
+  }
+  
+.column {
+    flex: 50%;
+} */
+
+.column {
+    float: left;
+    width: 50%;
+  }
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }

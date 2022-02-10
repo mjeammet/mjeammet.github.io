@@ -1,12 +1,25 @@
 {"projects":[
-    {"id":"DAPYP6", "title":"DAPY P6: Just Stream it",
+    {
+      "id":"DAPYP6",
+      "title":"DAPY P6: Just Stream it",
       "link":"https://github.com/mjeammet/DAPY-P6_juststreamit",
       "description":"Front-end / Javascript project. \"Consume\" a public API listing movies and display its content in an interactive \"Netflix-like\" fashion with carousels.",
-      "tags": ["front-end", "javascript", "api"]},
-    {"id":"DAPYP4", "title":"DAPY P4: Chess tournament manager",
+      "tags": ["front-end", "javascript", "api"]
+    },
+    {
+      "id":"DAPYP4", 
+      "title":"DAPY P4: Chess tournament manager",
       "link":"https://github.com/mjeammet/DAPY-P4_chess_tournament_manager",
       "description": "Console app. Allows to add, display and modify players in database, and assist user in matching players and keeping track of results.",
-      "tags": ["python", "mvc-architecture", "json"]}
+      "tags": ["python", "mvc-architecture", "json"]
+    },
+    {
+      "id":"DAPYP9",
+      "title":"DAPY P9: LITReview",
+      "link":"https://github.com/mjeammet/DAPY-P9_LITReview",
+      "description": "Django blog app for books and articles reviews. User can log in, browse their feed, follow other users and ask for/write reviews, write reviews.",
+      "tags":["django", "fullstack"]
+    }
   ],
   "current_book":
   {"isbn": 9782070336197}

@@ -1,11 +1,13 @@
-var jsonPath = "./data.json";
-jsonData = loadJson(jsonPath);
+const numColumns = 2;
+const jsonPath = "./data.json";
+let jsonData = loadJson(jsonPath);
 
-currentBookISBN = jsonData['current_book']['isbn'];
+let currentBookISBN = jsonData['current_book']['isbn'];
 load_currentbook(currentBookISBN);
 
-projects = jsonData["projects"];
+let projects = jsonData["projects"];
 load_projects(projects);
+
 
 
 function loadJson(jsonPath) {
@@ -42,31 +44,49 @@ async function load_currentbook(isbn){
 }
 
 function load_projects(projects_list){
+    let current_row;
+    let project_section = document.getElementById("projects_box");    
 
-    for (project of projects_list){
-        console.log(project);
+    for (let project_num = 0; project_num < projects_list.length; project_num++) {
+        project = projects_list[project_num]
+
+        if(project_num % numColumns == 0){
+            current_row = 0
+            current_row = document.createElement("div");
+            current_row.className = "row";
+            console.log(`new row`);
+        }
+
+        // console.log(project);
         new_project = buildProjectBox(project);
-        document.getElementById("projects_box").appendChild(new_project);
-    } 
+        current_row.appendChild(new_project);
+        console.log(`project ${project_num} added`);
+
+        if(project_num % numColumns == 1 || project_num == projects_list.length-1){
+            project_section.appendChild(current_row);
+            console.log(`row added!`);
+        }
+    }
 } 
 
 function buildProjectBox(project){
-    let box = document.createElement("div");
+    let project_box = document.createElement("div");
+    project_box.className = "column";
     
     let preview = document.createElement("img");
     preview.src = `./assets/images/projects/${project.id}/preview.png`;
     preview.className = "project_img";
     preview.width = 500;
-    box.appendChild(preview);
+    project_box.appendChild(preview);
 
     let title = document.createElement("h3");
     title.innerHTML = `<a href='${project.link}'>${project.title}</a>`;
-    box.appendChild(title);
+    project_box.appendChild(title);
 
     let description = document.createElement("p");
     description.style = "font-size: 16px; width: 80%; margin: auto;";
     description.innerHTML = project.description;
-    box.appendChild(description);
+    project_box.appendChild(description);
 
     let tag_box = document.createElement("ul");
     tag_box.style = "display: inline-flex;";
@@ -78,7 +98,7 @@ function buildProjectBox(project){
         tagElement.style = "margin-right: 30px; list-style-type:none; font-size: 16px;";
         tag_box.appendChild(tagElement);
     }
-    box.appendChild(tag_box);
+    project_box.appendChild(tag_box);
 
-    return box;
+    return project_box;
 }
