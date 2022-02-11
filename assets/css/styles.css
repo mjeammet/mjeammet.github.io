@@ -23,6 +23,7 @@ body{
     margin-top: 16px;
     width: 95%;
     border: black 2px solid;
+    height: 300px;
 }
 .project_img:hover{
     margin-top: 0px;
@@ -31,6 +32,12 @@ body{
 
 a{
     color: rgb(48, 43, 87);
+}
+
+.description{
+  font-size: 16px;
+  width: 80%;
+  margin: auto;
 }
 
 /* .row {
@@ -52,8 +59,14 @@ a{
     clear: both;
   }
 
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
+.tags{
+  margin-right: 30px;
+  list-style-type:none;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
   }
+}

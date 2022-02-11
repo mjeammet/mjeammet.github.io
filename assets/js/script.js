@@ -54,21 +54,21 @@ function load_projects(projects_list){
             current_row = 0
             current_row = document.createElement("div");
             current_row.className = "row";
-            console.log(`new row`);
         }
 
-        // console.log(project);
         new_project = buildProjectBox(project);
         current_row.appendChild(new_project);
-        console.log(`project ${project_num} added`);
 
         if(project_num % numColumns == 1 || project_num == projects_list.length-1){
             project_section.appendChild(current_row);
-            console.log(`row added!`);
         }
     }
 } 
 
+/**
+ * Build a box to display project's information
+ * @param project dictionnary containing project's info
+ */
 function buildProjectBox(project){
     let project_box = document.createElement("div");
     project_box.className = "column";
@@ -84,7 +84,7 @@ function buildProjectBox(project){
     project_box.appendChild(title);
 
     let description = document.createElement("p");
-    description.style = "font-size: 16px; width: 80%; margin: auto;";
+    description.className = "description";
     description.innerHTML = project.description;
     project_box.appendChild(description);
 
@@ -95,7 +95,7 @@ function buildProjectBox(project){
         // Using directly tag of projects.tags changed the size of the image. Yes, that's weird
         let tagElement = document.createElement("li");
         tagElement.innerText = `#${tag_text}`;
-        tagElement.style = "margin-right: 30px; list-style-type:none; font-size: 16px;";
+        tagElement.className = "tags";
         tag_box.appendChild(tagElement);
     }
     project_box.appendChild(tag_box);
