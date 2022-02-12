@@ -73,12 +73,18 @@ function buildProjectBox(project){
     let project_box = document.createElement("div");
     project_box.className = "column";
     
+    let img_box = document.createElement("div");
+    img_box.className = "img_box";
+
     let preview = document.createElement("img");
     preview.src = `./assets/images/projects/${project.id}/preview.png`;
     preview.className = "project_img";
     preview.width = 500;
-    project_box.appendChild(preview);
 
+    img_box.appendChild(preview);
+    project_box.appendChild(img_box);
+
+    
     let title = document.createElement("h3");
     title.innerHTML = `<a href='${project.link}'>${project.title}</a>`;
     project_box.appendChild(title);
