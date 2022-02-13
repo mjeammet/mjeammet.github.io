@@ -10,7 +10,7 @@
       "title":"DAPY P6: Just Stream it",
       "link":"https://github.com/mjeammet/DAPY-P6_juststreamit",
       "description":"Front-end / Javascript project. \"Consume\" a public API listing movies and display its content in an interactive \"Netflix-like\" fashion with carousels.",
-      "tags": ["front-end", "javascript", "api"]
+      "tags": ["front-end", "javascript", "API"]
     },    
     {
       "id":"DAPYP9",
@@ -25,8 +25,17 @@
       "link":"https://github.com/mjeammet/DAPY-P12_epic_events",
       "description": "Secure RESTful API for EPIC events' CRM. Provides 4 endpoints with different permissions depending on team of user (admin/sales/support).",
       "tags":["API", "RESTful", "CRM"]
+    },
+    {
+      "id": "bibli",
+      "title": "Personal book shelf app",
+      "link": "private",
+      "description": "I read a lot and wanted to make statistics on my readings :3. Books infos are gathered using openlibrary's public APIs.",
+      "tags": ["django", "postgresql", "data analysis"]
     }
   ],
   "current_book":
-  {"isbn": 9782070336197}
+  {
+    "isbn": 9782070336197
+  }
 }

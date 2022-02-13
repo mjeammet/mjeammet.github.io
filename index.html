@@ -5,12 +5,13 @@
         <title></title>
         <link rel="stylesheet" href="/assets/css/styles.css">
     </head>
-    <body style="margin: auto; text-align: center;">
-        <div style="width:60%; margin: auto; text-align: center;">
-
+    <body>
+        <div class="centered_div">
             <img style="width: 35%; margin-top: 10vh; border: black 5px ridge;" src="/assets/images/avatar_garnet.png" alt="garnet_avatar" width="300px"/>
+        </div> 
+        <div class="centered_div transparent">
 
-            <div class="text_box">
+            <div>
                 <h1>Marie Pupo-Jeammet</h1>
                 <p>
                     <ul style="display: inline-flex;">
@@ -24,7 +25,7 @@
 
             <hr style="width: 80%;">
             
-            <div class="text_box">
+            <div>
                 <h3>Projects</h3>
 
                 <p>Most of these projects were performed during<br>
@@ -32,6 +33,7 @@
                     to become an Python app developer.</a></p>    
             </div>
             <div id='projects_box'>
+                <!-- TODO add a filter to find projects using tags of projects infos-->
                 <!-- Completed by JavaScript -->
             </div>
 
@@ -50,7 +52,11 @@
             </footer>
         </div>
         
-        <!-- TODO Add a modal to hold current book's info. Add link to open archive in there -->
+        <!-- TODO Add a modal to show project's pictures -->
+        <!-- The Modal -->
+        <div id="modal_overlay" class="modal">
+            <!-- Modal content -->
+        </div>
 
         <script src="/assets/js/script.js" type="text/javascript"></script>
     </body>

@@ -8,11 +8,14 @@ load_currentbook(currentBookISBN);
 let projects = jsonData["projects"];
 load_projects(projects);
 
-
-
+/**
+ * Load "database" json
+ * @param {String} jsonPath
+ * @return parsed json
+ */
 function loadJson(jsonPath) {
-    var result = null;
-    var xmlhttp = new XMLHttpRequest();
+    let result = null;
+    let xmlhttp = new XMLHttpRequest();
     xmlhttp.open("GET", jsonPath, false);
     xmlhttp.send();
     if (xmlhttp.status==200) {
@@ -24,7 +27,8 @@ function loadJson(jsonPath) {
 /**
  * Load current book infos from openlibrary.org 
  * and modify index.html to display it in the dedicate section
- * @param isbn book isbn-13 (starting with '9 78')
+ * @param {String} isbn book isbn-13 (starting with '9 78')
+ * @return None
  */
 async function load_currentbook(isbn){
     let bookapi_url = `https://openlibrary.org/api/books?bibkeys=ISBN:${isbn}&jscmd=data&format=json`;
@@ -63,11 +67,13 @@ function load_projects(projects_list){
             project_section.appendChild(current_row);
         }
     }
-} 
+}
+
 
 /**
  * Build a box to display project's information
- * @param project dictionnary containing project's info
+ * @param {json} project dictionnary containing project's info
+ * @return {dom element} project_box 
  */
 function buildProjectBox(project){
     let project_box = document.createElement("div");
@@ -80,6 +86,7 @@ function buildProjectBox(project){
     preview.src = `./assets/images/projects/${project.id}/preview.png`;
     preview.className = "project_img";
     preview.width = 500;
+    preview.onclick = function() { open_images(project.id); };
 
     img_box.appendChild(preview);
     project_box.appendChild(img_box);
@@ -107,4 +114,52 @@ function buildProjectBox(project){
     project_box.appendChild(tag_box);
 
     return project_box;
+}
+
+/**
+ * 
+ * @param {String} project_id 
+ */
+function open_images(project_id){
+    let modal = document.getElementById("modal_overlay");
+
+    let modal_content = document.createElement("div");
+    modal_content.className = "modal-content";
+    
+    let enlarged_img = document.createElement("img");
+    enlarged_img.src = `./assets/images/projects/${project_id}/big_display.png`;
+    enlarged_img.style = "width: 100%;"
+    modal_content.appendChild(enlarged_img);
+
+    // Add a button to close the modal
+    let span = document.createElement('span');
+    span.className = 'close';
+    span.innerHTML = '&times;';
+    span.onclick = function() { close_modal(); }
+    modal_content.appendChild(span);
+    
+    modal.appendChild(modal_content);
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            close_modal();
+        }
+    } 
+
+    modal.style.display = "block";
+    
+    // TODO find a way to prevent scrolling when the modal is open :thinking:
+    // /* Detect the button class name */
+    // let overlayOpen = modal.style.display === 'block';
+    // modal.setAttribute('aria-hidden', !overlayOpen);
+    
+    // let body = document.getElementsByClassName("body");
+    // body.classList.toggle('noscroll', overlayOpen);
+}
+
+function close_modal(){
+    modal = document.getElementById("modal_overlay");
+    modal.style.display = "none";
+    modal.innerHTML = "";
 }

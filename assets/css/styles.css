@@ -7,14 +7,21 @@ body{
     font-weight: bolder;
     color:rgb(1, 12, 63);
     font-size: larger;
+    margin: auto;
+    text-align: center;
+}
+
+.centered_div{
+  width:60%;
+  margin: auto;
+  text-align: center; 
+}
+
+.transparent{
+  background-color: rgba(254, 175, 78, 0.7);
 }
 
 /* Project box */
-.text_box{
-    background-color: #feaf4e; 
-    opacity: 0.7;
-}
-
 .img_box{
   height: 300px; 
 }
@@ -71,4 +78,49 @@ a{
   .img_box{
     height: 150px;
   }
+}
+
+
+/* THE MODAL */
+.modal {  
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  z-index: 10;
+  overscroll-behavior: contain;
+}
+
+.modal-content {
+  width: 70%; 
+  margin: 0% auto;
+  /* margin-top: 10vh; */
+  padding: 1%;
+  display: inline-block;
+  display: flex;
+  justify-items: center;
+}
+
+
+.noscroll { 
+  overflow: hidden;
+}
+
+[aria-hidden="true"] {    
+    transition: opacity 1s, z-index 0s 1s;
+    width: 100vw;
+    z-index: -1; 
+    opacity: 0;  
+}
+
+[aria-hidden="false"] {  
+    transition: opacity 1s;
+    width: 100%;
+    z-index: 1;  
+    opacity: 1; 
 }
