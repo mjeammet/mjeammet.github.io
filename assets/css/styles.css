@@ -11,6 +11,10 @@ body{
     text-align: center;
 }
 
+hr{
+  width: 80%;
+}
+
 .centered_div{
   width:60%;
   margin: auto;
@@ -19,6 +23,12 @@ body{
 
 .transparent{
   background-color: rgba(254, 175, 78, 0.7);
+}
+
+.profile_pic{
+  width: 35%;
+  margin-top: 10vh;
+  border: black 5px ridge;
 }
 
 /* Project box */
