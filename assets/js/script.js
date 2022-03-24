@@ -54,6 +54,11 @@ async function load_currentbook(isbn){
     }    
 }
 
+/**
+ * Load projects from data file
+ * @param {list} projects_list 
+ * @return None
+ */
 function load_projects(projects_list){
     let current_row;
     let project_section = document.getElementById("projects_box");    
@@ -98,10 +103,18 @@ function buildProjectBox(project){
     img_box.appendChild(preview);
     project_box.appendChild(img_box);
 
-    
     let title = document.createElement("h3");
-    title.innerHTML = `<a href='${project.link}'>${project.title}</a>`;
+    title.className = "title";
+    title.innerText = project.title;
     project_box.appendChild(title);
+
+    let links_box = document.createElement("div");
+    links_box.style = "display: inline-flex;";
+    if ('github' in project.links){
+        repo = project.links.github;
+        links_box.innerHTML = `<a href=${repo}><i class="fa fa-github" style="font-size: 1.3em;"></i></a>`;
+    }
+    project_box.appendChild(links_box);
 
     let description = document.createElement("p");
     description.className = "description";
@@ -124,7 +137,7 @@ function buildProjectBox(project){
 }
 
 /**
- * 
+ * Open modal to show 
  * @param {String} project_id 
  */
 function open_images(project_id){

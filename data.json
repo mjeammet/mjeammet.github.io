@@ -2,42 +2,54 @@
     {
       "id":"DAPYP4", 
       "title":"DAPY P4: Chess tournament manager",
-      "link":"https://github.com/mjeammet/DAPY-P4_chess_tournament_manager",
+      "links": {
+        "github": "https://github.com/mjeammet/DAPY-P4_chess_tournament_manager"
+      }, 
       "description": "Console app for chess tournaments. Add, display and modify players and tournaments in database. Assists user in matching players and keeping track of results.",
       "tags": ["python", "mvc-architecture", "json"]
     },{
       "id":"DAPYP6",
       "title":"DAPY P6: Just Stream it",
-      "link":"https://github.com/mjeammet/DAPY-P6_juststreamit",
-      "description":"Front-end / Javascript project. Read data from a public API listing movies and display its content in an interactive \"Netflix-like\" fashion with carousels.",
+      "links": {
+        "github": "https://github.com/mjeammet/DAPY-P6_juststreamit"
+      },
+      "description":"Front-end Javascript project. Read data from a public API listing movies and displays chosen categories in an interactive \"Netflix-like\" carousels.",
       "tags": ["front-end", "javascript", "API"]
     },    
     {
       "id":"DAPYP9",
       "title":"DAPY P9: LITReview",
-      "link":"https://github.com/mjeammet/DAPY-P9_LITReview",
+      "links": {
+        "github": "https://github.com/mjeammet/DAPY-P9_LITReview"
+      },
       "description": "Django blog app for books and articles reviews. User can log in, browse their feed, follow other users and ask for/write reviews, write reviews.",
       "tags":["django", "fullstack"]
     },
     {
       "id":"DAPYP12",
       "title":"DAPY P12: EPIC events",
-      "link":"https://github.com/mjeammet/DAPY-P12_epic_events",
+      "links": {
+        "github": "https://github.com/mjeammet/DAPY-P12_epic_events"
+      },
       "description": "Secure RESTful API for EPIC events' CRM. Provides 4 endpoints with different permissions depending on team of user (admin/sales/support).",
       "tags":["API", "RESTful", "CRM"]
     },
     {
       "id": "bibli",
       "title": "Personal book shelf app",
-      "link": "private",
+      "links": {
+        "github": "https://github.com/mjeammet/mabibli"
+      },
       "description": "I read a lot and wanted to make statistics on my readings :3. Books infos are gathered using openlibrary's public APIs.",
       "tags": ["django", "postgresql", "data analysis"]
     },
     {
       "id": "satrapies",
       "title": "Character generator for our RPG campaign",
-      "link": "www.eneeria.fr",
-      "description": "Thursday night is roleplay night! And as the system we play in SUPER LETHAL, it's nice to have a character generator available to everyone (but especially to our GM, the poor creature).",
+      "links": {
+        "site": "www.eneeria.fr"
+      },
+      "description": "Thursday night is roleplay night! And as the system we play in is SUPER LETHAL, it's nice to have a character generator available to everyone (but especially to our GM, poor creature).",
       "tags": ["TTRPG", "javascript", "sass", "deployed"]
     }
   ],

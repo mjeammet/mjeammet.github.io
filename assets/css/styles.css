@@ -4,7 +4,7 @@ body{
     background-repeat: repeat;
     background-position: right top;
     background-size: contain;
-    font-weight: bolder;
+    /* font-weight: bold; */
     color:rgb(1, 12, 63);
     font-size: larger;
     margin: auto;
@@ -13,6 +13,8 @@ body{
 
 hr{
   width: 80%;
+  margin: auto;
+  font-weight: 600px;
 }
 
 .centered_div{
@@ -36,6 +38,10 @@ i {
 }
 
 /* Project box */
+.title {
+  font-weight: bold;
+}
+
 .img_box{
   height: 300px; 
 }
