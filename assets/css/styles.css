@@ -31,6 +31,10 @@ hr{
   border: black 5px ridge;
 }
 
+i {
+  font-size: 2em;
+}
+
 /* Project box */
 .img_box{
   height: 300px; 

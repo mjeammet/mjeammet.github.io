@@ -34,17 +34,24 @@ async function load_currentbook(isbn){
     let bookapi_url = `https://openlibrary.org/api/books?bibkeys=ISBN:${isbn}&jscmd=data&format=json`;
     let api_response = await fetch(bookapi_url);
     let data_json = await api_response.json();
-    let isbn_object = data_json[`ISBN:${isbn}`]
-    // console.log(isbn_object);
 
     let cover = document.getElementById('currentbook_cover');
-    cover.href = isbn_object.url
     let cover_img = cover.childNodes[0];
-    cover_url = isbn_object.cover.medium;
-    cover_img.src = cover_url
-
     let basic_infos = document.getElementById('currentbook_basicinfo');
-    basic_infos.innerHTML = `${isbn_object.title}<br>by ${isbn_object.authors[0].name}`;
+    if (`ISBN:${isbn}` in data_json){
+        let isbn_object = data_json[`ISBN:${isbn}`]
+
+        // Updating book
+        cover.href = isbn_object.url;
+        cover_url = isbn_object.cover.medium;
+        cover_img.src = cover_url;
+        basic_infos.innerHTML = `${isbn_object.title}<br>by ${isbn_object.authors[0].name}`;
+        
+    } else {
+        console.log("prout");
+        cover.innerHTML = '';
+        basic_infos.innerHTML = `... something very interesting, I'm sure!<br>Unfortunately couldn't find book with ISBN ${isbn}<br>using <a href=https://openlibrary.org/dev/docs/api/books> openlibrary's book API</a>.`;
+    }    
 }
 
 function load_projects(projects_list){

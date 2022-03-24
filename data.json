@@ -3,13 +3,13 @@
       "id":"DAPYP4", 
       "title":"DAPY P4: Chess tournament manager",
       "link":"https://github.com/mjeammet/DAPY-P4_chess_tournament_manager",
-      "description": "Console app. Allows to add, display and modify players in database, and assist user in matching players and keeping track of results.",
+      "description": "Console app for chess tournaments. Add, display and modify players and tournaments in database. Assists user in matching players and keeping track of results.",
       "tags": ["python", "mvc-architecture", "json"]
     },{
       "id":"DAPYP6",
       "title":"DAPY P6: Just Stream it",
       "link":"https://github.com/mjeammet/DAPY-P6_juststreamit",
-      "description":"Front-end / Javascript project. \"Consume\" a public API listing movies and display its content in an interactive \"Netflix-like\" fashion with carousels.",
+      "description":"Front-end / Javascript project. Read data from a public API listing movies and display its content in an interactive \"Netflix-like\" fashion with carousels.",
       "tags": ["front-end", "javascript", "API"]
     },    
     {
@@ -32,10 +32,17 @@
       "link": "private",
       "description": "I read a lot and wanted to make statistics on my readings :3. Books infos are gathered using openlibrary's public APIs.",
       "tags": ["django", "postgresql", "data analysis"]
+    },
+    {
+      "id": "satrapies",
+      "title": "Character generator for our RPG campaign",
+      "link": "www.eneeria.fr",
+      "description": "Thursday night is roleplay night! And as the system we play in SUPER LETHAL, it's nice to have a character generator available to everyone (but especially to our GM, the poor creature).",
+      "tags": ["TTRPG", "javascript", "sass", "deployed"]
     }
   ],
   "current_book":
   {
-    "isbn": 9782070336197
+    "isbn": 9789568648732
   }
 }
