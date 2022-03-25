@@ -1,3 +1,6 @@
+/* @import url('/font-awesome-4.6.3/css/font-awesome.min.css'); */
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'); */
+
 body{
     background-image: url('/assets/images/background_sugarhighkid.png');
     /* https://brandfolder.com/workbench/color-palette: lots of #feaf4e */
@@ -33,8 +36,9 @@ hr{
   border: black 5px ridge;
 }
 
-i {
+.profile_links a {
   font-size: 2em;
+  margin-right: 0.8em;
 }
 
 /* Project box */

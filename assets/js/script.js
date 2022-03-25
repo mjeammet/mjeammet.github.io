@@ -112,7 +112,7 @@ function buildProjectBox(project){
     links_box.style = "display: inline-flex;";
     if ('github' in project.links){
         repo = project.links.github;
-        links_box.innerHTML = `<a href=${repo}><i class="fa fa-github" style="font-size: 1.3em;"></i></a>`;
+        links_box.innerHTML = `<a href=${repo}><i class="fa-brands fa-github" style="font-size: 1.3em;"></i></a>`;
     }
     project_box.appendChild(links_box);
 
