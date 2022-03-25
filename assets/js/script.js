@@ -109,10 +109,14 @@ function buildProjectBox(project){
     project_box.appendChild(title);
 
     let links_box = document.createElement("div");
-    links_box.style = "display: inline-flex;";
+    links_box.className = 'projects_linksbox';
     if ('github' in project.links){
         repo = project.links.github;
-        links_box.innerHTML = `<a href=${repo}><i class="fa-brands fa-github" style="font-size: 1.3em;"></i></a>`;
+        links_box.innerHTML = `<a href=${repo} target="_blank"><i class="fa-brands fa-github"></i></a>`;
+    }
+    if ('site' in project.links){
+        url = project.links.site;
+        links_box.innerHTML += `<a href=${url} target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>`; // or fa-right-from-bracket
     }
     project_box.appendChild(links_box);
 

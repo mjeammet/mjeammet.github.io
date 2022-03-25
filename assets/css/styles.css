@@ -7,11 +7,26 @@ body{
     background-repeat: repeat;
     background-position: right top;
     background-size: contain;
-    /* font-weight: bold; */
-    color:rgb(1, 12, 63);
+    color:rgb(45, 39, 58);
     font-size: larger;
     margin: auto;
     text-align: center;
+}
+
+/* a{
+  color: rgb(48, 43, 87);
+} */
+
+h1 {
+  font-weight: bolder;
+}
+
+h2 {
+  background-color: rgb(255, 252, 240);
+  width: 80%;  
+  border-radius: 5px;
+  margin: auto;
+  margin-bottom: 3px
 }
 
 hr{
@@ -20,25 +35,76 @@ hr{
   font-weight: 600px;
 }
 
-.centered_div{
-  width:60%;
+.centered{
+  width: 60%;
   margin: auto;
   text-align: center; 
 }
 
 .transparent{
-  background-color: rgba(254, 175, 78, 0.7);
+  background-color: rgba(254, 175, 78, 0.781);
 }
 
-.profile_pic{
+.profile_links a {
+  color: rgb(190, 109, 16);
+  font-size: 1.5em;
+  margin-right: 0.8em;
+}
+
+.hovertext{
+  position: relative;
+}
+
+.hovertext i {
+  padding-bottom: 2px;
+  border-bottom: 1px dotted black;
+}
+
+.hovertext:before {
+  font-weight: 500;
+  font-size: medium;
+  color: rgb(49, 48, 48);
+  text-align: center;
+
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background-color: rgb(231, 229, 229);
+  border-radius: 5px;
+  padding: 5px 5px;
+  transition: opacity 0.5s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.list-no-button {
+  list-style-type:none;
+}
+
+/* HEADER */
+.header {
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+
+.header img{
   width: 35%;
   margin-top: 10vh;
   border: black 5px ridge;
 }
 
-.profile_links a {
-  font-size: 2em;
-  margin-right: 0.8em;
+.header span {
+  font-weight: 500;
+  font-size: 0.8em;
 }
 
 /* Project box */
@@ -52,8 +118,8 @@ hr{
 
 .project_img{
     margin-top: 16px;
-    width: 95%;
-    height: 95%;
+    width: 90%;
+    height: 90%;
     padding-top: 1%;
 }
 
@@ -63,8 +129,12 @@ hr{
     padding-top: 0;
 }
 
-a{
-    color: rgb(48, 43, 87);
+.projects_linksbox {
+  display: inline-flex;
+}
+
+.projects_linksbox a i {
+  font-size: 1.3em;
 }
 
 .description{

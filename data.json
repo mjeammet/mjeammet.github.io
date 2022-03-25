@@ -1,4 +1,23 @@
-{"projects":[
+{"projects":
+  [
+    {
+      "id":"geeksingers", 
+      "title":"Site Geek Singers",
+      "links": {
+        "site": "http://geeksingers.fr/"
+      }, 
+      "description": "One-page Wordpress for my geek choir.",
+      "tags": ["wordpress", "associative"]
+    },
+    {
+      "id": "bibli",
+      "title": "Personal book shelf app",
+      "links": {
+        "github": "https://github.com/mjeammet/mabibli"
+      },
+      "description": "I read a lot and wanted to make statistics on my readings :3. Books infos are gathered using openlibrary's public APIs.",
+      "tags": ["django", "postgresql", "data analysis"]
+    },
     {
       "id":"DAPYP4", 
       "title":"DAPY P4: Chess tournament manager",
@@ -35,21 +54,12 @@
       "tags":["API", "RESTful", "CRM"]
     },
     {
-      "id": "bibli",
-      "title": "Personal book shelf app",
-      "links": {
-        "github": "https://github.com/mjeammet/mabibli"
-      },
-      "description": "I read a lot and wanted to make statistics on my readings :3. Books infos are gathered using openlibrary's public APIs.",
-      "tags": ["django", "postgresql", "data analysis"]
-    },
-    {
       "id": "satrapies",
       "title": "Character generator for our RPG campaign",
       "links": {
-        "site": "www.eneeria.fr"
+        "site": "https://eneeria.fr/rpg/ose/"
       },
-      "description": "Thursday night is roleplay night! And as the system we play in is SUPER LETHAL, it's nice to have a character generator available to everyone (but especially to our GM, poor creature).",
+      "description": "Thursday night is roleplay night! And as Old-School Essentials, the system we're playing in, is EXTREMELY LETHAL, it's nice to have a character generator available to everyone (but especially to our GM, poor creature).",
       "tags": ["TTRPG", "javascript", "sass", "deployed"]
     }
   ],

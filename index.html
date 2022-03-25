@@ -9,53 +9,73 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
     </head>
     <body>
-        <div class="centered_div">
-            <img class="profile_pic" src="/assets/images/avatar_garnet.png" alt="garnet_avatar" width="300px"/>
-        </div> 
-        <div class="centered_div transparent">
-
+        <div class="header centered transparent">
+            <img src="/assets/images/avatar_garnet.png" alt="garnet_avatar"/>
+            <h1>Marie Jeammet</h1>
             <div>
-                <h1>Marie Pupo-Jeammet</h1>
-                <p>
-                    <ul style="display: inline-flex;">
-                        <li style="margin-right:30px;">Back-end developer Python/Django</li>
-                        <li>TTRPG enthusiast</li>
-                    </ul>
-                </p>
-                <p class="profile_links">
-                    <a href="https://github.com/mjeammet"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://linkedin.com/in/mariejeammet"><i class="fa-brands fa-linkedin"></i></a>
-                    <!-- <a href="https://codetrace.com/users/mjeammet"><img src="https://www.appvizer.com/media/application/401/logo/logo-CodinGame%20Assessment.png" width="30px"></a> -->
-                    <a href="https://www.codingame.com/profile/dbcd4acd8f2c7cdccc47095eba3a75dd7843054"><i class="fa-solid fa-trophy"></i></a>
-                </p>                
+                <ul class="list-no-button" style="margin: 0px;">
+                    <li style="margin-right:30px;"><i class="fa-brands fa-python"></i> Back-end/Fullstack developer Python</li>
+                    <li><i class="fa-solid fa-briefcase"></i> Looking for work in social and solidarity economy</li>                   
+                </ul>
             </div>
 
-            <hr>
+            <span class="hovertext" data-hover="TTRPG enthusiast">
+                and also <i class="fa-solid fa-dice-d20" ></i>,
+            </span>
+            <span class="hovertext" data-hover="avid reader">
+                <i class="fa-solid fa-book"></i>,
+            </span>
+            <span class="hovertext" data-hover="environmental advocate">
+                <i class="fa-solid fa-seedling" ></i>,
+            </span>
+            <span class="hovertext" data-hover="town crier and goldkeeper @ geeksingers.fr">
+                <a href="https://geeksingers.fr" target="_blank">
+                    <i class="fa-solid fa-bullhorn" ></i>
+                    <i class="fa-solid fa-coins" ></i>,
+                </a>
+            </span>
+            <span class="hovertext" data-hover="badminton player">
+                <i class="fa-solid fa-person-running"></i>,
+            </span>
+            <span class="hovertext" data-hover="linux user">
+                <i class="fa-brands fa-linux"></i>
+            </span>
             
+            <p class="profile_links">
+                <a href="https://github.com/mjeammet" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/mariejeammet" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <!-- <a href="https://codetrace.com/users/mjeammet"><img src="https://www.appvizer.com/media/application/401/logo/logo-CodinGame%20Assessment.png" width="30px"></a> -->
+                <a href="https://www.codingame.com/profile/dbcd4acd8f2c7cdccc47095eba3a75dd7843054" target="_blank"><i class="fa-solid fa-trophy"></i></a>
+            </p>
+        </div>
+            
+        <div class="centered transparent">
             <div>
-                <h3>Projects</h3>
+                <h2>Projects</h2>
 
-                <p>Most of these projects were performed during<br>
-                    <a href='https://openclassrooms.com/fr/paths/518-developpeur-dapplication-python'>my training
-                    to become an Python app developer.</a></p>    
+                <ul>
+                    <li>DAPY projects were performed during <a href='https://openclassrooms.com/fr/paths/518-developpeur-dapplication-python' target="_blank">my training
+                        to become an Python app developer.</a></li>
+                </ul>
             </div>
             <div id='projects_box'>
                 <!-- TODO add a filter to find projects using tags of projects infos-->
                 <!-- Completed by JavaScript -->
             </div>
+            <!-- <ul>
+                <li>The last version of the Javascript Windows 8 tile app I made in 2015 for our HeroQuest campaign has gone missing!</li>
+                <li>The ugly website I made in 2008 for my best friend's rock band also has gone missing. It's OK. This one I'm not too eager to find.</li>
+            </ul> -->
 
-            <hr>
-            <div>
-                <div style="margin: auto;">
-                    <h3>Currently reading</h3>
-                    <a id="currentbook_cover" href=""><img style="border: black 2px solid;" src="" alt=""></a>
-                    <p id='currentbook_basicinfo'></p>
-                </div>
+            <div style="margin: auto; ">
+                <h2>Currently reading</h2>
+                <a id="currentbook_cover" href=""><img style="margin-top: 1vh; border: black 2px solid;" src="" alt=""></a>
+                <p id='currentbook_basicinfo'></p>
             </div>
 
             <footer>
-                <hr>
-                <p>Made by Marie, 2022</p>
+                <h2 style="font-size: medium;">Made with Jekyll, JavaScript, GitHub Pages and much <3</h2>
+                <!-- <br> -->
             </footer>
         </div>
         
