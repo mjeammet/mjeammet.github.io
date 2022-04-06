@@ -61,7 +61,15 @@
       },
       "description": "Thursday night is roleplay night! And as Old-School Essentials, the system we're playing in, is EXTREMELY LETHAL, it's nice to have a character generator available to everyone (but especially to our GM, poor creature).",
       "tags": ["TTRPG", "javascript", "sass", "deployed"]
-    }
+    },
+    {
+      "id": "dreamcatcher",
+      "title": "Dreams keywords analyzer",
+      "links": {
+      },
+      "description": "Dreams keywords analyzer using Plotly Dash.",
+      "tags": ["Python", "Plotly Dash", "DataViz"]
+    },
   ],
   "current_book":
   {
