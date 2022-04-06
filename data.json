@@ -64,10 +64,10 @@
     },
     {
       "id": "dreamcatcher",
-      "title": "Keywords analyzer and vizualisation",
+      "title": "Keywords analyzer",
       "links": {
       },
-      "description": "Dreams keywords analyzer using Plotly Dash.",
+      "description": "Dreams keywords analyzer and vizualisation with Plotly Dash.",
       "tags": ["Python", "Plotly Dash", "DataViz"]
     }
   ],
