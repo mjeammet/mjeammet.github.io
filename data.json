@@ -2,7 +2,7 @@
   [
     {
       "id":"geeksingers", 
-      "title":"Site Geek Singers",
+      "title":"Geek Singers website",
       "links": {
         "site": "http://geeksingers.fr/"
       }, 
@@ -11,11 +11,11 @@
     },
     {
       "id": "bibli",
-      "title": "Personal book shelf app",
+      "title": "Personal book shelf",
       "links": {
         "github": "https://github.com/mjeammet/mabibli"
       },
-      "description": "I read a lot and wanted to make statistics on my readings :3. Books infos are gathered using openlibrary's public APIs.",
+      "description": "I read a lot and wanted to generate stat on my readings :3. Books infos are gathered using openlibrary's public APIs.",
       "tags": ["django", "postgresql", "data analysis"]
     },
     {
@@ -50,17 +50,17 @@
       "links": {
         "github": "https://github.com/mjeammet/DAPY-P12_epic_events"
       },
-      "description": "Secure RESTful API for EPIC events' CRM. Provides 4 endpoints with different permissions depending on team of user (admin/sales/support).",
+      "description": "Secure RESTful API for EPIC events' CRM. Provides 4 endpoints with different permissions depending on user's team (admin/sales/support).",
       "tags":["API", "RESTful", "CRM"]
     },
     {
       "id": "satrapies",
-      "title": "Character generator for our RPG campaign",
+      "title": "Character generator",
       "links": {
         "site": "https://eneeria.fr/rpg/ose/"
       },
-      "description": "Thursday night is roleplay night! And as Old-School Essentials, the system we're playing in, is EXTREMELY LETHAL, it's nice to have a character generator available to everyone (but especially to our GM, poor creature).",
-      "tags": ["TTRPG", "javascript", "sass", "deployed"]
+      "description": "Our current RPG campaign is using Old-School Essentials, and it's EXTREMELY LETHAL. It's nice to have a character generator available to everyone (but especially to our GM, poor creature).",
+      "tags": ["TTRPG", "javascript", "scss", "deployed"]
     },
     {
       "id": "dreamcatcher",
@@ -68,7 +68,7 @@
       "links": {
       },
       "description": "Dreams keywords analyzer and vizualisation with Plotly Dash.",
-      "tags": ["Python", "Plotly Dash", "DataViz"]
+      "tags": ["python", "Plotly Dash", "dataviz"]
     }
   ],
   "current_book":
