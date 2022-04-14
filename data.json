@@ -15,7 +15,7 @@
       "links": {
         "github": "https://github.com/mjeammet/mabibli"
       },
-      "description": "I read a lot and wanted to generate stat on my readings :3. Books infos are gathered using openlibrary's public APIs.",
+      "description": "I love reading and I love numbers so it's always been exciting to me to generate stats on my readings :3. Books infos are gathered using openlibrary's public APIs.",
       "tags": ["django", "postgresql", "data analysis"]
     },
     {
@@ -32,7 +32,7 @@
       "links": {
         "github": "https://github.com/mjeammet/DAPY-P6_juststreamit"
       },
-      "description":"Front-end Javascript project. Read data from a public API listing movies and displays chosen categories in an interactive \"Netflix-like\" carousels.",
+      "description":"Front-end HTML/CSS/Javascript project. Reads data from a public API listing movies and displays chosen categories in interactive carousels.",
       "tags": ["front-end", "javascript", "API"]
     },    
     {
@@ -41,7 +41,7 @@
       "links": {
         "github": "https://github.com/mjeammet/DAPY-P9_LITReview"
       },
-      "description": "Django blog app for books and articles reviews. User can log in, browse their feed, follow other users and ask for/write reviews, write reviews.",
+      "description": "Django blog app for books and articles reviews. Users can log in, browse their feed, follow other users, ask for and write reviews.",
       "tags":["django", "fullstack"]
     },
     {
@@ -51,24 +51,24 @@
         "github": "https://github.com/mjeammet/DAPY-P12_epic_events"
       },
       "description": "Secure RESTful API for EPIC events' CRM. Provides 4 endpoints with different permissions depending on user's team (admin/sales/support).",
-      "tags":["API", "RESTful", "CRM"]
+      "tags":["API", "RESTful", "DRF", "CRM"]
     },
     {
       "id": "satrapies",
-      "title": "Character generator",
+      "title": "D&D character generator",
       "links": {
         "site": "https://eneeria.fr/rpg/ose/"
       },
-      "description": "Our current RPG campaign is using Old-School Essentials, and it's EXTREMELY LETHAL. It's nice to have a character generator available to everyone (but especially to our GM, poor creature).",
-      "tags": ["TTRPG", "javascript", "scss", "deployed"]
+      "description": "Our current RPG campaign is using Old-School Essentials, and it is EXTREMELY LETHAL. To ease things up for the DM (and sometimes players), I deployed a quick character generator on alwaysdata.",
+      "tags": ["TTRPG", "javascript", "SCSS", "deployed"]
     },
     {
       "id": "dreamcatcher",
-      "title": "Keywords analyzer",
+      "title": "Dreamcatcher",
       "links": {
       },
-      "description": "Dreams keywords analyzer and vizualisation with Plotly Dash.",
-      "tags": ["python", "Plotly Dash", "dataviz"]
+      "description": "Visualizer to explore keywords from our dreams. Select a local folder and all files are parsed to look for '#keywords'. Network is generated with visdcc, vizualisation with Plotly Dash.",
+      "tags": ["python", "parsing", "plotly Dash", "dataviz"]
     }
   ],
   "current_book":
