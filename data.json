@@ -67,12 +67,24 @@
       "title": "Dreamcatcher",
       "links": {
       },
-      "description": "Visualizer to explore keywords from our dreams. Select a local folder and all files are parsed to look for '#keywords'. Network is generated with visdcc, vizualisation with Plotly Dash.",
-      "tags": ["python", "parsing", "plotly Dash", "dataviz"]
-    }
+      "description": "Dream analyzer in with Plotly Dash. Select a local folder and all text files are parsed to look for '#keywords'. A network is generated, linking co-occuring keywords.",
+      "tags": ["python", "parsing", "Dash", "dataviz"]
+    },
+    {
+      "id": "relatives_visualizer",
+      "title": "Relatives visualizer",
+      "links": {
+      },
+      "description": "Flask app to explore DNA relationships. Due to lack of legal help and despite very problematic confidentiality issues, many adopted people turn towards DNA tests today, looking for answers. This tool serves as an organizer to centralize knowledge about relatives, and hopefully make things a tiny bit clearer to those looking for answers <3.",
+      "tags": ["flask", "sqlalchemy", "Dash", "dataviz"]
+    }    
   ],
-  "current_book":
-  {
-    "isbn": 9789568648732
-  }
+  "hobbies": {
+    "book": { "isbn": 9789568648732 }, 
+    "rpg": {
+      "title": "Curse of Strahd",
+      "cover": "https://www.dndbeyond.com/avatars/10349/296/637244603965977140.jpeg",
+      "link": "https://www.dndbeyond.com/marketplace/adventures/curse-of-strahd"
+    }
+  }    
 }

@@ -2,11 +2,10 @@ const numColumns = 2;
 const jsonPath = "./data.json";
 let jsonData = loadJson(jsonPath);
 
-let currentBookISBN = jsonData['current_book']['isbn'];
-load_currentbook(currentBookISBN);
-
 let projects = jsonData["projects"];
 load_projects(projects);
+
+load_current_hobbies(jsonData['hobbies']);
 
 /**
  * Load "database" json
@@ -24,35 +23,6 @@ function loadJson(jsonPath) {
     return JSON.parse(result);
 }
 
-/**
- * Load current book infos from openlibrary.org 
- * and modify index.html to display it in the dedicate section
- * @param {String} isbn book isbn-13 (starting with '9 78')
- * @return None
- */
-async function load_currentbook(isbn){
-    let bookapi_url = `https://openlibrary.org/api/books?bibkeys=ISBN:${isbn}&jscmd=data&format=json`;
-    let api_response = await fetch(bookapi_url);
-    let data_json = await api_response.json();
-
-    let cover = document.getElementById('currentbook_cover');
-    let cover_img = cover.childNodes[0];
-    let basic_infos = document.getElementById('currentbook_basicinfo');
-    if (`ISBN:${isbn}` in data_json){
-        let isbn_object = data_json[`ISBN:${isbn}`]
-
-        // Updating book
-        cover.href = isbn_object.url;
-        cover_url = isbn_object.cover.medium;
-        cover_img.src = cover_url;
-        basic_infos.innerHTML = `${isbn_object.title}<br>by ${isbn_object.authors[0].name}`;
-        
-    } else {
-        console.log("prout");
-        cover.innerHTML = '';
-        basic_infos.innerHTML = `... something very interesting, I'm sure!<br>Unfortunately couldn't find book with ISBN ${isbn}<br>using <a href=https://openlibrary.org/dev/docs/api/books> openlibrary's book API</a>.`;
-    }    
-}
 
 /**
  * Load projects from data file
@@ -182,8 +152,109 @@ function open_images(project_id){
     // body.classList.toggle('noscroll', overlayOpen);
 }
 
+
 function close_modal(){
     modal = document.getElementById("modal_overlay");
     modal.style.display = "none";
     modal.innerHTML = "";
+}
+
+/**
+ * Loads current book and games and album and every hobby listed in data.json 
+ * @param {dictionary} hobbies 
+ */
+function load_current_hobbies(hobbies){
+    if (Object.keys(hobbies).length == 0){
+        add_hobby_block(
+            icon_class="fa-regular fa-face-sad-tear",
+            title="All work and no play makes Marie a dull gurl",
+            cover_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fb6%2F62%2F42%2Fb662422efc908d8d4543b499a9a9a86d.jpg&f=1&nofb=1")
+    }
+
+    if ("book" in hobbies) {
+        isbn = hobbies['book']['isbn'];
+        add_current_book(isbn);
+    }
+    if ('rpg' in hobbies){
+        current_rpg = hobbies['rpg'];
+        add_hobby_block(
+            icon_class="fa-solid fa-dice",
+            title=current_rpg['title'],
+            cover_url=current_rpg['cover'],
+            link=current_rpg['link'])
+
+    }
+}
+
+/**
+ * Generic function to add a new div element to #hobbies div.
+ * @param {String} icon_class font awesome class to display logo
+ * @param {String} title 
+ * @param {String} cover_url 
+ * @param {String} link_url 
+ */
+function add_hobby_block(icon_class, title, cover_url="", link_url=""){
+    hobbies_div = document.getElementById("hobbies");
+
+    let block = document.createElement("div");
+    block.innerHTML = `<h1><i class="${icon_class}"></i></h1>`;
+
+    let link = document.createElement("a");
+    link.href = link_url;
+    link.target = "_blank";
+
+    let cover = document.createElement("img");
+    cover.src = cover_url;
+    cover.className = 'card_image';
+    link.append(cover);
+
+    let text = document.createElement("p");
+    text.innerText = title;
+    link.append(text);
+
+    block.append(link);
+    hobbies_div.append(block);
+}
+
+/**
+ * Load current book infos from openlibrary.org 
+ * and modify index.html to display it in the dedicate section
+ * !! Currently not using generic function because of asynchronicity issues
+ * @param {String} isbn Unique 13-digits code, starting with '9 78'
+ * @return None
+ */
+ async function add_current_book(isbn){
+    let bookapi_url = `https://openlibrary.org/api/books?bibkeys=ISBN:${isbn}&jscmd=data&format=json`;
+    let api_response = await fetch(bookapi_url);
+    let data_json = await api_response.json();
+
+    hobbies_div = document.getElementById("hobbies");
+
+    let block = document.createElement("div");
+    block.innerHTML = `<h1><i class="fa-solid fa-book"></i></h1>`;
+
+    let link = document.createElement("a");
+    let cover = document.createElement("img");
+    if (`ISBN:${isbn}` in data_json){
+        let isbn_object = data_json[`ISBN:${isbn}`]
+
+        link.href = isbn_object.url;
+        link.target = "_blank";
+        
+        cover.src = isbn_object.cover.medium;
+        cover.className = 'card_image';
+        link.append(cover);
+
+        infos = `${isbn_object.title}<br>by ${isbn_object.authors[0].name}`;
+    } else {
+        console.log("Naaah!");
+        infos = `... something very interesting, I'm sure!<br>Unfortunately, couldn't find book with ISBN ${isbn}<br>using <a href=https://openlibrary.org/dev/docs/api/books> openlibrary's book API</a>.`;
+    }
+
+    let text = document.createElement("p");
+    text.innerHTML = infos;
+    link.append(text);
+
+    block.append(link);
+    hobbies_div.append(block);
 }

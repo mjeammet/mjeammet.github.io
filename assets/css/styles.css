@@ -12,16 +12,22 @@ body{
     text-align: center;
 }
 
-/* a{
-  color: rgb(48, 43, 87);
-} */
+/* frambuesa rgb(131, 14, 49) */
+/* violeta rgb(48, 43, 87) */
+/* rgb(37, 121, 30)" */
 
 h1 {
   font-weight: bolder;
+  font-size: 3.5rem;
+}
+
+h1 i {
+  color: rgb(48, 43, 87);
 }
 
 h2 {
   background-color: rgb(255, 252, 240);
+  color: rgb(48, 43, 87); 
   width: 80%;  
   border-radius: 5px;
   margin: auto;
@@ -34,7 +40,7 @@ hr{
   font-weight: 600px;
 }
 
-.centered{
+.content-width{
   width: 60%;
   margin: auto;
   text-align: center; 
@@ -44,10 +50,14 @@ hr{
   background-color: rgba(254, 175, 78, 0.781);
 }
 
+.profile_links {
+  padding: 1vw;
+}
+
 .profile_links a {
-  color: rgb(190, 109, 16);
+  color: rgb(48, 43, 87);
   font-size: 1.5em;
-  margin-right: 0.8em;
+  margin: 0.8em;
 }
 
 .hovertext{
@@ -93,6 +103,7 @@ hr{
 .header {
   font-weight: bolder;
   font-size: 1.2em;
+  color: rgb(48, 43, 87);
 }
 
 .header img{
@@ -159,6 +170,24 @@ hr{
     display: table;
     clear: both;
   }
+
+/* FOOTER */
+
+#hobbies {
+  display: flex;
+  justify-content: center;
+}
+
+#hobbies div{
+  margin: 5px;
+}
+
+.card_image {
+  margin-top: 1vh;
+  border: black 2px solid;
+  /* width: 200px; */
+  height: 20em;
+}
 
 
 @media screen and (max-width: 600px) {
