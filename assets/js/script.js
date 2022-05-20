@@ -7,6 +7,8 @@ load_projects(projects);
 
 load_current_hobbies(jsonData['hobbies']);
 
+load_skills_icons(jsonData['skills']);
+
 /**
  * Load "database" json
  * @param {String} jsonPath
@@ -257,4 +259,34 @@ function add_hobby_block(icon_class, title, cover_url="", link_url=""){
 
     block.append(link);
     hobbies_div.append(block);
+}
+
+/**
+ * Loads skills icons
+ */
+function load_skills_icons(skills){
+    let skill_box = document.getElementById("skills_box");
+    for (skill of skills['op']) {
+        skill_box.append(get_proper_icon(skill));
+    }
+
+    if (skills['learning'] != []) {
+        skill_box.innerHTML += "<p>and learning / getting deeper with ... </p>";
+        for (skill of skills['learning']) {
+            skill_box.append(get_proper_icon(skill));
+        }
+    }
+    
+}
+
+function get_proper_icon(techno){
+    let icon = document.createElement('img');
+
+    let suffix = "original"
+    if (["ubuntu", "django"].includes(techno) ){
+        suffix = "plain";
+    }
+
+    icon.src = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${techno}/${techno}-${suffix}.svg`;
+    return icon;
 }

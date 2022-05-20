@@ -171,6 +171,17 @@ hr{
     clear: both;
   }
 
+/* SKILLS */
+
+#skills_box {
+  margin: 20px 0px;
+}
+
+#skills_box img {
+  width: 2.5em;
+  margin: 5px;
+}
+
 /* FOOTER */
 
 #hobbies {

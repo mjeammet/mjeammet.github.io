@@ -79,6 +79,10 @@
       "tags": ["flask", "sqlalchemy", "Dash", "dataviz"]
     }    
   ],
+  "skills": {
+    "op": ["python", "django", "flask", "postgresql", "html5", "css3", "javascript", "ubuntu", "git"],
+    "learning": ["sass", "go", "react", "docker", "fastapi"]
+  },
   "hobbies": {
     "book": { "isbn": 9789568648732 }, 
     "rpg": {
