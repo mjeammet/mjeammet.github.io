@@ -75,7 +75,7 @@
       "title": "Relatives visualizer",
       "links": {
       },
-      "description": "Flask app to explore DNA relationships. Due to lack of legal help and despite very problematic confidentiality issues, many adopted people turn towards DNA tests today, looking for answers. This tool serves as an organizer to centralize knowledge about relatives, and hopefully make things a tiny bit clearer to those looking for answers <3.",
+      "description": "Due to the lack of legal help (and despite very problematic confidentiality issues), many adopted people turn to 'recreational' DNA tests when looking for answers. This tool serves aims at centralizing all knowledge about relatives, and hopefully help organize information for those trying to make sense of their ancestry <3.",
       "tags": ["flask", "sqlalchemy", "Dash", "dataviz"]
     }    
   ],
