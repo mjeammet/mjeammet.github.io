@@ -207,7 +207,7 @@ function add_hobby_block(icon_class, title, cover_url="", link_url=""){
 
     let cover = document.createElement("img");
     cover.src = cover_url;
-    cover.className = 'card_image';
+    cover.className = 'hobby_image';
     link.append(cover);
 
     let text = document.createElement("p");
@@ -244,7 +244,7 @@ function add_hobby_block(icon_class, title, cover_url="", link_url=""){
         link.target = "_blank";
         
         cover.src = isbn_object.cover.medium;
-        cover.className = 'card_image';
+        cover.className = 'hobby_image';
         link.append(cover);
 
         infos = `${isbn_object.title}<br>by ${isbn_object.authors[0].name}`;

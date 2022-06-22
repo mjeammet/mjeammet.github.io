@@ -15,7 +15,7 @@
       "links": {
         "github": "https://github.com/mjeammet/mabibli"
       },
-      "description": "I love reading and I love numbers so it's always been exciting to me to generate stats on my readings :3. Books infos are gathered using openlibrary's public APIs.",
+      "description": "I love reading AND numbers so it's always been exciting to me to generate stats on what I read :3. Books infos are gathered using openlibrary's public APIs.",
       "tags": ["django", "postgresql", "data analysis"]
     },
     {
@@ -24,7 +24,7 @@
       "links": {
         "github": "https://github.com/mjeammet/DAPY-P4_chess_tournament_manager"
       }, 
-      "description": "Console app for chess tournaments. Add, display and modify players and tournaments in database. Assists user in matching players and keeping track of results.",
+      "description": "Console app for chess tournaments. Allows to add, display and modify players and tournaments in database. Assists user in matching players and keeping track of results.",
       "tags": ["python", "mvc-architecture", "json"]
     },{
       "id":"DAPYP6",
@@ -32,7 +32,7 @@
       "links": {
         "github": "https://github.com/mjeammet/DAPY-P6_juststreamit"
       },
-      "description":"Front-end HTML/CSS/Javascript project. Reads data from a public API listing movies and displays chosen categories in interactive carousels.",
+      "description":"Front-end HTML/CSS/Javascript project. Fetch data from a public API and displays movies of chosen categories in interactive carousels.",
       "tags": ["front-end", "javascript", "API"]
     },    
     {
@@ -41,7 +41,7 @@
       "links": {
         "github": "https://github.com/mjeammet/DAPY-P9_LITReview"
       },
-      "description": "Django blog app for books and articles reviews. Users can log in, browse their feed, follow other users, ask for and write reviews.",
+      "description": "Django blog app for books and articles reviews. Users can log in, browse their feed, follow other users, ask for reviews or write their own.",
       "tags":["django", "fullstack"]
     },
     {
@@ -59,7 +59,7 @@
       "links": {
         "site": "https://eneeria.fr/rpg/ose/"
       },
-      "description": "Our current RPG campaign is using Old-School Essentials, and it is EXTREMELY LETHAL. To ease things up for the DM (and sometimes players), I deployed a quick character generator on alwaysdata.",
+      "description": "We were running a RPG campaign using Old-School Essentials, which is EXTREMELY LETHAL. To ease things up for the DM (and sometimes players), I deployed a quick character generator on alwaysdata.",
       "tags": ["TTRPG", "javascript", "SCSS", "deployed"]
     },
     {
@@ -75,7 +75,7 @@
       "title": "Relatives visualizer",
       "links": {
       },
-      "description": "Due to the lack of legal help (and despite very problematic confidentiality issues), many adopted people turn to 'recreational' DNA tests when looking for answers. This tool serves aims at centralizing all knowledge about relatives, and hopefully help organize information for those trying to make sense of their ancestry <3.",
+      "description": "Due to the lack of legal help and despite very problematic confidentiality issues, many adopted people turn towards 'recreational' DNA tests to investigate their origins. This tool aims at centralizing all knowledge about relatives, and hopefully help organize information for those trying to make sense of their ancestry <3.",
       "tags": ["flask", "sqlalchemy", "Dash", "dataviz"]
     }    
   ],
