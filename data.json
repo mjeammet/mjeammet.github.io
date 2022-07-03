@@ -3,85 +3,90 @@
     {
       "id":"geeksingers", 
       "title":"Geek Singers website",
+      "stack": ["wordpress"],
       "links": {
         "site": "http://geeksingers.fr/"
       }, 
-      "description": "One-page Wordpress for my geek choir.",
-      "tags": ["wordpress", "associative"]
+      "description": "One-page website for my geek choir.",
+      "tags": ["associative"]
     },
     {
       "id": "bibli",
       "title": "Personal book shelf",
+      "stack": ["python", "django", "postgresql"],
       "links": {
         "github": "https://github.com/mjeammet/mabibli"
       },
-      "description": "I love reading AND numbers so it's always been exciting to me to generate stats on what I read :3. Books infos are gathered using openlibrary's public APIs.",
-      "tags": ["django", "postgresql", "data analysis"]
+      "description": "I love books AND numbers so it's always been exciting to me to generate stats on my readings :3. Books infos are gathered using openlibrary's public APIs.",
+      "tags": ["books", "data analysis"]
     },
     {
       "id":"DAPYP4", 
       "title":"DAPY P4: Chess tournament manager",
+      "stack": ["python"],
       "links": {
         "github": "https://github.com/mjeammet/DAPY-P4_chess_tournament_manager"
       }, 
       "description": "Console app for chess tournaments. Allows to add, display and modify players and tournaments in database. Assists user in matching players and keeping track of results.",
-      "tags": ["python", "mvc-architecture", "json"]
+      "tags": ["student-project", "mvc-architecture", "console", "json"]
     },{
       "id":"DAPYP6",
       "title":"DAPY P6: Just Stream it",
+      "stack": ["html5", "css3", "javascript"],
       "links": {
         "github": "https://github.com/mjeammet/DAPY-P6_juststreamit"
       },
       "description":"Front-end HTML/CSS/Javascript project. Fetch data from a public API and displays movies of chosen categories in interactive carousels.",
-      "tags": ["front-end", "javascript", "API"]
+      "tags": ["student-project", "front-end", "API"]
     },    
     {
       "id":"DAPYP9",
       "title":"DAPY P9: LITReview",
+      "stack": ["python", "django", "sqlite", "bootstrap"],
       "links": {
         "github": "https://github.com/mjeammet/DAPY-P9_LITReview"
       },
       "description": "Django blog app for books and articles reviews. Users can log in, browse their feed, follow other users, ask for reviews or write their own.",
-      "tags":["django", "fullstack"]
+      "tags":["student-project", "fullstack"]
     },
     {
       "id":"DAPYP12",
       "title":"DAPY P12: EPIC events",
+      "stack": ["python", "django rest framework"],
       "links": {
         "github": "https://github.com/mjeammet/DAPY-P12_epic_events"
       },
       "description": "Secure RESTful API for EPIC events' CRM. Provides 4 endpoints with different permissions depending on user's team (admin/sales/support).",
-      "tags":["API", "RESTful", "DRF", "CRM"]
+      "tags":["student-project", "API", "CRM"]
     },
     {
       "id": "satrapies",
       "title": "D&D character generator",
-      "links": {
-        "site": "https://eneeria.fr/rpg/ose/"
-      },
-      "description": "We were running a RPG campaign using Old-School Essentials, which is EXTREMELY LETHAL. To ease things up for the DM (and sometimes players), I deployed a quick character generator on alwaysdata.",
-      "tags": ["TTRPG", "javascript", "SCSS", "deployed"]
+      "stack": ["python", "django", "sass", "javascript"],
+      "links": {},
+      "description": "Old-School Essentials; EXTREMELY LETHAL. A tool to ease things up for the DM (and for players after a certain TPK). Deployed on alwaysdata during the campaign.",
+      "tags": ["TTRPG", "deployed"]
     },
     {
       "id": "dreamcatcher",
       "title": "Dreamcatcher",
-      "links": {
-      },
+      "stack": ["python"],
+      "links": {},
       "description": "Dream analyzer in with Plotly Dash. Select a local folder and all text files are parsed to look for '#keywords'. A network is generated, linking co-occuring keywords.",
-      "tags": ["python", "parsing", "Dash", "dataviz"]
+      "tags": ["parsing", "Dash", "dataviz"]
     },
     {
       "id": "relatives_visualizer",
       "title": "Relatives visualizer",
-      "links": {
-      },
+      "stack": ["python", "flask", "sqlalchemy"],
+      "links": {},
       "description": "Due to the lack of legal help and despite very problematic confidentiality issues, many adopted people turn towards 'recreational' DNA tests to investigate their origins. This tool aims at centralizing all knowledge about relatives, and hopefully help organize information for those trying to make sense of their ancestry <3.",
-      "tags": ["flask", "sqlalchemy", "Dash", "dataviz"]
+      "tags": ["genealogy", "Dash", "dataviz"]
     }    
   ],
   "skills": {
-    "op": ["python", "django", "flask", "postgresql", "html5", "css3", "javascript", "ubuntu", "git"],
-    "learning": ["sass", "go", "react", "docker", "fastapi"]
+    "op": ["python", "django", "flask", "postgresql", "html5", "css3", "javascript", "linux", "git"],
+    "learning": ["flask", "pytest", "sass", "docker"]
   },
   "hobbies": {
     "book": { "isbn": 9789568648732 }, 

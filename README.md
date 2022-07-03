@@ -7,9 +7,6 @@ This page will act as a resume and portfolio :)
 ## Running locally
 
 ```
-# Install Jekyll
-
-
 # Run server
 jekyll serve
 ```

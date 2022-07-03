@@ -27,11 +27,11 @@ h1 i {
 
 h2 {
   background-color: rgb(255, 252, 240);
-  color: rgb(48, 43, 87); 
+  color: rgb(48, 43, 87);
   width: 80%;  
   border-radius: 5px;
   margin: auto;
-  margin-bottom: 3px
+  margin-bottom: 3px;
 }
 
 hr{
@@ -118,52 +118,62 @@ hr{
 }
 
 /* Project box */
-.title {
+.project-box {
+  /* border: 1px solid white; */
+  float: left;
+  width: 50%;
+  margin-bottom: 1.5em;
+}
+
+.project-box .title {
   font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
-.img_box{
-  height: 300px; 
-}
-
-.project_img{
-    margin-top: 16px;
-    width: 90%;
-    height: 90%;
-    padding-top: 1%;
-}
-
-.project_img:hover{
-    width: 100%;
-    height: 100%;
-    padding-top: 0;
-}
-
-.projects_linksbox {
+.project-box .tags-box {
+  text-align: center;
   display: inline-flex;
-}
-
-.projects_linksbox a i {
-  font-size: 1.3em;
-}
-
-.description{
-  text-align: justify;
-  font-size: 16px;
-  width: 80%;
   margin: auto;
-}
-
-.tags{
-  margin-right: 30px;
-  list-style-type:none;
+  list-style-type: none; /* '#' leaves a blank space */
   font-size: 12px;
 }
 
-.column {
-    float: left;
-    width: 50%;
-  }
+.project-box .tags-box .tags {
+  margin: 0px 15px 0px 15px;
+}
+
+.project-box .img_box{
+  height: 325px; 
+}
+
+.project_img{
+  width: 92%;
+  height: 92%;
+}
+
+.project_img:hover{
+  width: 95%;
+  height: 95%;
+}
+
+.stackbox img {
+  width: 1.5em;
+  margin: 0px 5px 0px 5px;
+  padding-top: 0px;
+}
+
+.stackbox a i{
+  margin: 0px 5px 0px 5px;
+  font-size: 1.3em;
+}
+
+.project-box .description{
+  text-align: justify;
+  font-size: 16px;
+  width: 80%;
+  margin: 1em auto 1em auto;
+}
 
 .row:after {
     content: "";
@@ -202,7 +212,7 @@ hr{
 
 
 @media screen and (max-width: 600px) {
-  .column {
+  .project-box {
     width: 100%;
   } 
 }

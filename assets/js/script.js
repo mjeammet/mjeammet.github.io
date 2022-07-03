@@ -61,7 +61,7 @@ function load_projects(projects_list){
  */
 function buildProjectBox(project){
     let project_box = document.createElement("div");
-    project_box.className = "column";
+    project_box.className = "project-box";
     
     let img_box = document.createElement("div");
     img_box.className = "img_box";
@@ -80,37 +80,53 @@ function buildProjectBox(project){
     title.innerText = project.title;
     project_box.appendChild(title);
 
-    let links_box = document.createElement("div");
-    links_box.className = 'projects_linksbox';
-    if ('github' in project.links){
-        repo = project.links.github;
-        links_box.innerHTML = `<a href=${repo} target="_blank"><i class="fa-brands fa-github"></i></a>`;
-    }
-    if ('site' in project.links){
-        url = project.links.site;
-        links_box.innerHTML += `<a href=${url} target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>`; // or fa-right-from-bracket
-    }
-    project_box.appendChild(links_box);
-
-    let description = document.createElement("p");
-    description.className = "description";
-    description.innerHTML = project.description;
-    project_box.appendChild(description);
-
-    let tag_box = document.createElement("ul");
-    tag_box.style = "display: inline-flex;";
+    let tags_box = document.createElement("ul");
+    tags_box.className = "tags-box";
     for (tag in project.tags){
         let tag_text = project.tags[tag];
         // Using directly tag of projects.tags changed the size of the image. Yes, that's weird
         let tagElement = document.createElement("li");
         tagElement.innerText = `#${tag_text}`;
         tagElement.className = "tags";
-        tag_box.appendChild(tagElement);
+        tags_box.appendChild(tagElement);
     }
-    project_box.appendChild(tag_box);
+    project_box.appendChild(tags_box);
+
+    let description = document.createElement("p");
+    description.className = "description";
+    description.innerHTML = project.description;
+    project_box.appendChild(description);
+
+    let stack_box = document.createElement("div");
+    stack_box.className = 'stackbox';
+    for (techno in project.stack) {
+        let techno_name = project.stack[techno];
+        // alert(techno_name);
+        stack_box.append(get_proper_icon(techno_name));
+    }
+    project_box.appendChild(stack_box);
+
+    // Add a hyphen between stack and tags (if both are non null)
+    if (stack_box.innerHTML && (! isEmpty(project.links))){
+        stack_box.innerHTML += ` - `
+    }
+
+    if ('github' in project.links){
+        repo = project.links.github;
+        stack_box.innerHTML += `<a href=${repo} target="_blank"><i class="fa-brands fa-github"></i></a>`;
+    }
+    if ('site' in project.links){
+        url = project.links.site;
+        stack_box.innerHTML += `<a href=${url} target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>`; // or fa-right-from-bracket
+    }       
+    project_box.appendChild(stack_box);
 
     return project_box;
 }
+
+function isEmpty(obj) {
+    return Object.keys(obj).length === 0;
+  }
 
 /**
  * Open modal to show 
@@ -271,7 +287,7 @@ function load_skills_icons(skills){
     }
 
     if (skills['learning'] != []) {
-        skill_box.innerHTML += "<p>and learning / getting deeper with ... </p>";
+        skill_box.innerHTML += "<p>and currently learning / getting deeper with ... </p>";
         for (skill of skills['learning']) {
             skill_box.append(get_proper_icon(skill));
         }
@@ -285,6 +301,11 @@ function get_proper_icon(techno){
     let suffix = "original"
     if (["ubuntu", "django"].includes(techno) ){
         suffix = "plain";
+    }
+
+    if (techno == "django rest framework") {
+        icon.src = "https://www.django-rest-framework.org/img/favicon.ico"
+        return icon
     }
 
     icon.src = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${techno}/${techno}-${suffix}.svg`;
