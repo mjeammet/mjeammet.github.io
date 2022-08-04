@@ -6,6 +6,7 @@ This page will act as a resume and portfolio :)
 
 ## Running locally
 
+Install Jekyll following instruction at https://jekyllrb.com/docs/installation/
 ```
 # Run server
 jekyll serve

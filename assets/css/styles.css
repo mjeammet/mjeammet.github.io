@@ -23,6 +23,7 @@ h1 {
 
 h1 i {
   color: rgb(48, 43, 87);
+  font-size: 0.8em;
 }
 
 h2 {
@@ -144,7 +145,7 @@ hr{
 }
 
 .project-box .img_box{
-  height: 325px; 
+  height: 14vw; 
 }
 
 .project_img{
@@ -206,8 +207,8 @@ hr{
 .hobby_image {
   margin-top: 1vh;
   border: black 2px solid;
-  /* width: 200px; */
-  height: 15em;
+  width: 8em;
+  height: 12em;
 }
 
 

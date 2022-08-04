@@ -178,24 +178,29 @@ function close_modal(){
 }
 
 /**
- * Loads current book and games and album and every hobby listed in data.json 
+ * Loads current hobbies from json file and openlibrary.org
  * @param {dictionary} hobbies 
  */
-function load_current_hobbies(hobbies){
+async function load_current_hobbies(hobbies){
     if (Object.keys(hobbies).length == 0){
-        add_hobby_block(
+        make_hobby_block(
             icon_class="fa-regular fa-face-sad-tear",
             title="All work and no play makes Marie a dull gurl",
-            cover_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fb6%2F62%2F42%2Fb662422efc908d8d4543b499a9a9a86d.jpg&f=1&nofb=1")
+            cover_url="https://i.pinimg.com/736x/f1/2f/7f/f12f7f38acd514ef826b655fc6f52713.jpg")
     }
 
-    if ("book" in hobbies) {
-        isbn = hobbies['book']['isbn'];
-        add_current_book(isbn);
-    }
+    // Fetch current book(s) from my openlibrary's reading log
+    reading_list = await fetch_current_book();
+    // TODO if empty
+    for (item of reading_list){
+        book = item['work'];
+        console.log(book);
+        add_current_book(book);
+    }   
+    
     if ('rpg' in hobbies){
         current_rpg = hobbies['rpg'];
-        add_hobby_block(
+        make_hobby_block(
             icon_class="fa-solid fa-dice",
             title=current_rpg['title'],
             cover_url=current_rpg['cover'],
@@ -211,7 +216,7 @@ function load_current_hobbies(hobbies){
  * @param {String} cover_url 
  * @param {String} link_url 
  */
-function add_hobby_block(icon_class, title, cover_url="", link_url=""){
+function make_hobby_block(icon_class, title, cover_url="", link_url=""){
     hobbies_div = document.getElementById("hobbies");
 
     let block = document.createElement("div");
@@ -234,14 +239,56 @@ function add_hobby_block(icon_class, title, cover_url="", link_url=""){
     hobbies_div.append(block);
 }
 
+
+async function fetch_current_book(){
+    let profile_url = `https://openlibrary.org/people/maruey/books/currently-reading.json`;
+    let response = await fetch(profile_url);
+    if (response.ok){
+        // cool
+    }else{
+        console.log("Current book not retrieved!");
+        return None;
+    }
+    let data_json = await response.json();
+    return data_json['reading_log_entries'];
+}
+
+
+function add_current_book(book){
+    hobbies_div = document.getElementById("hobbies");
+
+    let block = document.createElement("div");
+    block.innerHTML = `<h1><i class="fa-solid fa-book"></i></h1>`;
+
+    let link = document.createElement("a");
+    let cover = document.createElement("img");
+    link.href = `https://openlibrary.org/${book['key']}`;
+    link.target = "_blank";
+        
+    cover.src = `https://covers.openlibrary.org/b/olid/${book['cover_edition_key']}-M.jpg`
+    cover.className = 'hobby_image';
+    link.append(cover);
+
+    infos = `${book['title']} (${book['first_publish_year']})<br>by ${book['author_names'][0]}`;
+
+    let text = document.createElement("p");
+    text.innerHTML = infos;
+    link.append(text);
+
+    block.append(link);
+    hobbies_div.append(block);
+}
+
+
 /**
+ * OBSOLETE
  * Load current book infos from openlibrary.org 
  * and modify index.html to display it in the dedicate section
  * !! Currently not using generic function because of asynchronicity issues
  * @param {String} isbn Unique 13-digits code, starting with '9 78'
  * @return None
  */
- async function add_current_book(isbn){
+ async function add_current_book_from_isbn(isbn){
     let bookapi_url = `https://openlibrary.org/api/books?bibkeys=ISBN:${isbn}&jscmd=data&format=json`;
     let api_response = await fetch(bookapi_url);
     let data_json = await api_response.json();
@@ -265,7 +312,6 @@ function add_hobby_block(icon_class, title, cover_url="", link_url=""){
 
         infos = `${isbn_object.title}<br>by ${isbn_object.authors[0].name}`;
     } else {
-        console.log("Naaah!");
         infos = `... something very interesting, I'm sure!<br>Unfortunately, couldn't find book with ISBN ${isbn}<br>using <a href=https://openlibrary.org/dev/docs/api/books> openlibrary's book API</a>.`;
     }
 

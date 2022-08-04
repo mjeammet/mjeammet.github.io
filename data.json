@@ -89,7 +89,6 @@
     "learning": ["flask", "pytest", "sass", "docker"]
   },
   "hobbies": {
-    "book": { "isbn": 9789568648732 }, 
     "rpg": {
       "title": "Curse of Strahd",
       "cover": "https://www.dndbeyond.com/avatars/10349/296/637244603965977140.jpeg",
