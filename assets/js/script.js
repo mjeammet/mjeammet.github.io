@@ -67,7 +67,7 @@ function buildProjectBox(project){
     img_box.className = "img_box";
 
     let preview = document.createElement("img");
-    preview.src = `./assets/images/projects/${project.id}/preview.png`;
+    preview.src = `./assets/images/projects/${project.id}/preview.webp`;
     preview.className = "project_img";
     preview.width = 500;
     preview.onclick = function() { open_images(project.id); };
@@ -139,7 +139,7 @@ function open_images(project_id){
     modal_content.className = "modal-content";
     
     let enlarged_img = document.createElement("img");
-    enlarged_img.src = `./assets/images/projects/${project_id}/big_display.png`;
+    enlarged_img.src = `./assets/images/projects/${project_id}/big_display.webp`;
     enlarged_img.style = "width: 100%;"
     modal_content.appendChild(enlarged_img);
 
